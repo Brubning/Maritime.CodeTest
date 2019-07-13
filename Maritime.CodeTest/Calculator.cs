@@ -72,7 +72,7 @@ namespace Maritime.CodeTest
             foreach (var x in sortedNumbers)
             {
                 // When current number goes over the upper value, move to the next bin.
-                if (x > currentBin.UpperValue)
+                while (x > currentBin.UpperValue)
                 {
                     if (bin >= sortedBins.Count)
                         return sortedBins;
